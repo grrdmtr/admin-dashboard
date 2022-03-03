@@ -15,7 +15,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 20px;
+  padding: 20px 40px;
 
   box-shadow: rgba(0, 0, 0, 0.16) 0 4px 2px -2px;
   order: 1;
@@ -87,6 +87,12 @@ body {
   background-color: white;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .projects {
   position: relative;
   grid-row: 1 / 3;
@@ -97,9 +103,33 @@ body {
   gap: 20px;
 }
 
+.annon_card>h4 {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.annon_card p {
+  font-size: 0.8rem;
+  color: #7B7B7B;
+  margin: 0;
+}
+
+.annon_card {
+  border-bottom: 1px solid #d8d8d8;
+  padding-bottom: 10px;
+}
+
+.annon_card:last-child {
+  border-bottom: none;
+  padding-bottom: initial;
+}
+
 .trending {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+
+  display: grid;
+  gap: 10px;
 }
 
 .anon_container, .trending_container {
@@ -112,12 +142,12 @@ body {
   font-size: 1rem;
 }
 
-.card>h2 {
+.card .info>h2 {
   font-size: 1rem;
   margin-bottom: 5px;
 }
 
-.card p {
+.card .info p {
   font-size: 0.9rem;
   color: #7B7B7B;
   margin: 0;
@@ -152,4 +182,64 @@ body {
 .search {
   display: flex;
   align-items: center;
+}
+
+.avatar::before {
+  background-image: url("./avatars/1040.png");
+  background-size: cover;
+  display: inline-block;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  content: "";
+}
+
+.welcome>.avatar::before {
+  width: 55px;
+  height: 55px;
+}
+
+.users {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.users p {
+  font-size: 0.7rem;
+  color: #7B7B7B;
+  margin: 0;
+}
+
+.users p:first-child {
+  color: black;
+  font-weight: 600;
+}
+
+.users:first-child .avatar::before {
+  background-image: url("./avatars/1043.png");
+}
+
+.users:last-child .avatar::before {
+  background-image: url("./avatars/1290.png");
+}
+
+.users:nth-child(3) .avatar::before {
+  background-image: url("./avatars/1800.png");
+}
+
+.message p {
+  margin: 2px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.message p:first-child {
+  font-size: 0.8rem;
+}
+.projects .card .buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  font-size: 1.3rem;
 }
